@@ -1,4 +1,4 @@
-package exercicio_4_1_a;
+package exercicio_4_2_a;
 
 import java.awt.Graphics;
 
@@ -10,14 +10,15 @@ public class DesenhaLinha extends JPanel
 	{
 		super.paintComponent( g );
 		
-		int height = getHeight();
+		int altura = getHeight();
+		int largura = getWidth();
 		int contador = 0;
-		int amplitude = ( int ) 250 / 15;
+		double amplitude = altura / 15;
 		int incremento = 0;
 		
 		while( contador < 15 ) 
 		{
-			g.drawLine( 0 , 0 + incremento, 0 + incremento, height );
+			g.drawLine( 0, 0, largura - incremento, 0 + incremento );
 			incremento += amplitude;
 			contador++;
 		}
