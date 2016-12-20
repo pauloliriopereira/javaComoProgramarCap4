@@ -1,14 +1,14 @@
 package exercicio_4_17;
 
 /*
- * Desenvolva um aplicativo Java que receba como entrada os quilômetros
+ * Desenvolva um aplicativo Java que receba como entrada os quilï¿½metros
  * dirigidos e os litros de gasolina consumidos para cada tanque cheio. 
- * O programa deve calcular e exibir o consumo em quilômetros/litro para
+ * O programa deve calcular e exibir o consumo em quilï¿½metros/litro para
  * cada tanque cheio e imprimir a quilometragem combinada e a soma total
- * de litros de combustível consumidos até esse ponto. Todos os cálculos
- * de média devem produzir resultados de ponto flutuante. Utilize classe
- * Scanner e repetição controlada por sentinela para obter os dados do
- * usuário.
+ * de litros de combustï¿½vel consumidos atï¿½ esse ponto. Todos os cï¿½lculos
+ * de mï¿½dia devem produzir resultados de ponto flutuante. Utilize classe
+ * Scanner e repetiï¿½ï¿½o controlada por sentinela para obter os dados do
+ * usuï¿½rio.
  */
 
 public class Tanque 
