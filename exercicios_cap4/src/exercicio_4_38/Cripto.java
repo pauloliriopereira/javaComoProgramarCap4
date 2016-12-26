@@ -42,12 +42,12 @@ public class Cripto
 	private void soma7troca()
 	{
 		int temp1, temp2;
-		temp1 = ( digito4 + 7 ) % 10;
-		temp2 =	( digito2 + 7 ) % 10;
+		temp1 = soma7( digito4 ) % 10;
+		temp2 =	soma7( digito2 ) % 10;
 		digito2 = temp1;
 		digito4 = temp2;
-		temp1 =	( digito3 + 7 ) % 10;
-		temp2 =	( digito1 + 7 ) % 10;
+		temp1 =	soma7( digito3 ) % 10;
+		temp2 =	soma7( digito1 ) % 10;
 		digito1 = temp1;
 		digito3 = temp2;
 	}
@@ -61,9 +61,42 @@ public class Cripto
 		return digito1 + digito2 + digito3 + digito4;
 	}
 	
+	public int desCriptografa()
+	{
+		sub7troca();
+		return transforma();
+	}
+	
+	private void sub7troca()
+	{
+		int temp1, temp2;
+		temp1 = sub7( digito4 ) % 10;
+		temp2 =	sub7( digito2 ) % 10;
+		digito2 = temp1;
+		digito4 = temp2;
+		temp1 =	sub7( digito3 ) % 10;
+		temp2 =	sub7( digito1 ) % 10;
+		digito1 = temp1;
+		digito3 = temp2;
+	}
+	
+	private int sub7( int numero )
+	{
+		return ( ( numero - 7 ) > 0 ) ? ( numero - 7 ) : ( numero + 3 ); 
+	}
+	
+	private int soma7( int numero )
+	{
+		return ( numero + 7 );
+	}
+	
 	public static void main( String[] args ) 
 	{
 		Cripto cripto = new Cripto( 1234 );
-		System.out.println( cripto.criptografa() );
+		int numero = cripto.criptografa();
+		System.out.println( numero );
+		
+		Cripto desCripto = new Cripto( numero );
+		System.out.println( desCripto.desCriptografa() );
 	}
 }
